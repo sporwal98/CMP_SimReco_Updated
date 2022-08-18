@@ -1,0 +1,123 @@
+12:08:20 Setting up DBRelease /cvmfs/atlas.cern.ch/repo/sw/database/DBRelease/current environment
+12:08:20 Mon Aug  8 12:08:20 CEST 2022
+12:08:20 Preloading tcmalloc_minimal.so
+12:08:23 Py:Athena            INFO including file "AthenaCommon/Preparation.py"
+12:08:23 Py:Athena            INFO using release [Athena-21.0.135] [x86_64-centos7-gcc62-opt] [21.0/1b61cd968d2] -- built on [2022-08-02T2111]
+12:08:23 Py:Athena            INFO including file "AthenaCommon/Bootstrap.py"
+12:08:23 Py:Athena            INFO including file "AthenaCommon/Atlas.UnixStandardJob.py"
+12:08:26 Py:Athena            INFO executing ROOT6Setup
+12:08:27 Py:Athena            INFO including file "AthenaCommon/Execution.py"
+12:08:27 Py:Athena            INFO including file "runargs.RAWtoESD.py"
+12:08:29 Py:Athena            INFO including file "RecJobTransforms/skeleton.RAWtoESD_tf.py"
+12:08:29 Py:Athena            INFO including file "RecJobTransforms/CommonRecoSkeletonJobOptions.py"
+12:08:29 Py:Athena            INFO including file "RecExCommon/RecoUsefulFlags.py"
+12:08:29 Py:Athena            INFO Importing MuonRecExample.MuonRecUtils
+12:08:29 Py:Athena            INFO Importing MuonCnvExample.MuonCnvUtils
+12:08:29 Py:Athena            INFO Importing module MuonCnvExample.MuonCalibFlags
+12:08:29 Py:MuonCnvExample.MuonCalibFlags    INFO Changing default mdtPropagationSpeedBeta = 1.0
+12:08:29 Py:MuonRec           INFO Importing MuonRecExample.MuonRecFlags
+12:08:29 Py:MuonRec           INFO Changing default applyResilience = True
+12:08:29 Py:MuonRec           INFO Changing default doMSVertex = True
+12:08:29 Py:MuonRec           INFO Changing default enableErrorTuning = True
+12:08:29 Py:MuonRec           INFO Changing default writeSDOs = True
+12:08:29 Py:Athena            INFO Importing MuonCnvExample.MuonCnvFlags
+12:08:29 Py:MuonCnvExample.MuonCnvFlags    INFO Changing default RpcCablingMode = 'auto'
+12:08:29 Py:MuonCnvExample.MuonCnvFlags    INFO Changing default TgcCablingMode = '12-fold'
+12:08:30 Py:JobProperty ::    INFO AODFlags:: now uses JobProperty mechanisms
+12:08:30 Py:raw_to_esd        INFO ****************** STARTING RAW->ESD MAKING *****************
+12:08:30 Py:ConfigurableDb    INFO Read module info for 5344 configurables from 2 genConfDb files
+12:08:30 Py:ConfigurableDb    INFO No duplicates have been found: that's good !
+12:08:30 Py:Athena            INFO including file "RecExCommon/RecExCommon_topOptions.py"
+12:08:31 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]...
+12:08:31 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]... [done]
+12:08:31 Py:Athena            INFO including file "RecExCond/RecExCommon_flags.py"
+12:08:31 Py:AutoConfiguration    INFO Auto-configuration key 'everything' requested. All default keys will be used.
+12:08:31 Py:AutoConfiguration    INFO Auto-configuration will procede according to the following keys:
+12:08:31 Py:AutoConfiguration    INFO set(['DoTruth', 'ConditionsTag', 'BeamType', 'TriggerStream', 'ProjectName', 'BeamEnergy', 'FieldAndGeo', 'RealOrSim', 'LumiFlags', 'InputType'])
+12:08:31 Py:inputFilePeeker    INFO Executing   inputFilePeeker.py
+12:08:32 Py:AthFile           INFO opening [tmp.RDO]...
+12:09:02 Py:inputFilePeeker    INFO Successfully filled inputFileSummary from file tmp.RDO
+12:09:02 Py:inputFilePeeker    INFO Extracted streams ['StreamRDO'] from input file
+12:09:02 Py:AutoConfiguration    INFO Success! GetProjectName() found a project named IS_SIMULATION
+12:09:02 Py:AutoConfiguration    INFO Auto configured BeamType: collisions
+12:09:02 Py:AutoConfiguration    INFO Not a heavy ion project
+12:09:02 Py:AutoConfiguration    INFO Input file is simulation.
+12:09:02 Py:AutoConfiguration WARNING Input file does not contain triggerStreamOfFile! Trying to specify otherwise!
+12:09:02 Py:AutoConfiguration    INFO Failed to find triggerStream from inputFileSummary. OK for MC but can be problematic for data.
+12:09:02 Py:AutoConfiguration    INFO Keeping input value untouched: rec.triggerStream=''
+12:09:02 Py:AutoConfiguration    INFO conditionsTag is locked to value: 'OFLCOND-MC16-SDR-14'.
+12:09:02 Py:AutoConfiguration    INFO Geometry was locked to: ATLAS-R2-2016-01-00-01_VALIDATION
+12:09:02 Py:AutoConfiguration    INFO Reading magnetic field status from input file metadata.
+12:09:02 Py:AutoConfiguration WARNING Input file metadata don't have necessary info to get field conditions. It's probably too old.
+12:09:02 Py:AutoConfiguration    INFO Trying to guess magnetic field status from conditionsTag
+12:09:02 Py:AutoConfiguration WARNING Don't know how to interpret magnetic field status from conditionsTag 'OFLCOND-MC16-SDR-14'.
+12:09:02 Py:AutoConfiguration    INFO Trying to guess magnetic field status from geometryVersion.
+12:09:02 Py:AutoConfiguration    INFO Field status sucessfully auto-configured to values:
+12:09:02 Py:AutoConfiguration    INFO BField: barrelToroidOn = True
+12:09:02 Py:AutoConfiguration    INFO BField: BField.endcapToroidOn = True
+12:09:02 Py:AutoConfiguration    INFO BField: BField.solenoidOn = True
+12:09:02 Py:AutoConfiguration    INFO Input has McEventCollection. Auto-configuring doTruth=True
+12:09:02 Py:JobProperty ::    INFO The JobProperty InputFormat is blocked
+12:09:02 Py:AutoConfiguration    INFO Extracted streams ['StreamRDO'] from input file
+12:09:02 Py:AutoConfiguration    INFO Input RDO detected
+12:09:02 Py:JobProperty ::    INFO The JobProperty readRDO is blocked
+12:09:02 Py:JobProperty ::    INFO The JobProperty doESD is blocked
+12:09:02 Py:AutoConfiguration    INFO setting rec.readRDO=True
+12:09:02 Py:AutoConfiguration    INFO setting rec.doESD=True
+12:09:02 Py:AutoConfiguration    INFO Auto-configured beam energy : 6500000.0 MeV
+12:09:02 Py:AutoConfiguration WARNING numberOfCollisions could not be auto configured, no info available using default value: 0.0
+12:09:02 Py:AutoConfiguration    INFO Auto configured bunchSpacing: 25
+12:09:02 Py:AutoConfiguration    INFO Leaving auto-configuration
+12:09:02 Py:Athena            INFO including file "RecExConfig/AutoConfigConsistencyCheck.py"
+12:09:02 Py:RecExCommon_flags    INFO starting the migration to JobProperties. WILL SOON BE DISABLED.
+12:09:02 Py:RecExCommon_flags    INFO Synchronising  old flags to new flags
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doFloatingPointException new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO Modified value for flag PoolRDOInput new flag: ['tmp.RDO'] old flag:['RDO.pool.root']
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doCBNT new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag PoolESDOutput new flag: tmp.ESD old flag:ESD.pool.root
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doAOD new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doAOD new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doEFlow new flag: True old flag:False
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doHist new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doWriteAOD new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doMuonSpShower new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag EvtMax new flag: -1 old flag:5
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doiPatRec new flag: False old flag:True
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doDPD new flag: True old flag:False
+12:09:02 Py:RecExCommon_flags    INFO inconsistency: for flag doWriteTAG new flag: False old flag:True
+12:09:02 oldFlagCompatibility==True : Deleting all standalone flags!
+12:09:02 Py:RecExCommon_flags    INFO athenaCommonFlags.FilesInput override input file specification
+12:09:02 Py:RecExCommon_flags    INFO done the mapping in between the old flags and JobProperties
+12:09:02 Py:Athena            INFO including file "RecExCond/RecExCommon_DetFlags.py"
+12:09:02 Py:Athena            INFO including file "RecExCond/RecExCommon_GlobalFlags.py"
+12:09:02 Py:AutoConfiguration    INFO in IsInInputFile...
+12:09:02 Py:AutoConfiguration    INFO looks like object of name <type 'object'> is NOT in input file. Returning False
+12:09:02 Py:AutoConfiguration    INFO in IsInInputFile...
+12:09:02 Py:AutoConfiguration    INFO looks like object of name <type 'object'> is NOT in input file. Returning False
+12:09:02 Py:AutoConfiguration    INFO in IsInInputFile...
+12:09:02 Py:AutoConfiguration    INFO looks like object of name <type 'object'> is NOT in input file. Returning False
+12:09:02 Py:MuonRec           INFO Changing default applyResilience = False
+12:09:02 Py:MuonRec           INFO Changing default useAlignmentCorrections = True
+12:09:02 Py:MuonRec           INFO DetFlags.writeRIOPool.MDT_setOn()
+12:09:02 Py:MuonRec           INFO DetFlags.writeRIOPool.RPC_setOn()
+12:09:02 Py:MuonRec           INFO DetFlags.writeRIOPool.CSC_setOn()
+12:09:02 Py:MuonRec           INFO DetFlags.writeRIOPool.TGC_setOn()
+12:09:02 Py:Athena            INFO including file "TriggerRelease/TransientBS_DetFlags.py"
+12:09:02 Py:Athena            INFO including file "CaloRec/CaloCellMaker_config.py"
+12:09:02 Py:Athena            INFO including file "CaloRec/CaloCellMakerFlags_jobOptions.py"
+12:09:02 oldFlagCompatibility==True : Deleting all standalone flags! and forbidding use of old flags
+12:09:02 Py:RecExCommon_topOptions    INFO Abort on unchecked status code enabled !
+12:09:02 Py:AODFix            INFO Summary of MetaData for AODFix:
+12:09:02 Py:AODFix            INFO  Input file is MC
+12:09:02 Py:AODFix            INFO  Input file produced with Athena version <>.
+12:09:02 Py:AODFix            INFO  AODFix version <> was previously applied.
+12:09:02 Py:RecoFix           INFO Summary of MetaData for RecoFix:
+12:09:02 Py:RecoFix           INFO  AODFix version <> was previously applied.
+12:09:02 EventInfoMgtInit: Got release version  Athena-21.0.135
+12:09:02 Py:IOVDbSvc.CondDB    INFO Setting up conditions DB access to instance OFLP200
+12:09:02 Py:Athena            INFO including file "RecExCond/AllDet_detDescr.py"
+12:09:03 Py:Athena            INFO including file "IdDictDetDescrCnv/IdDictDetDescrCnv_joboptions.py"
+12:09:03 SetGeometryVersion.py obtained major release version 21
+12:09:03 The geometry tag  ATLAS-R2-2016-01-00-01_VALIDATION  could not be found in the database.
+12:09:03 Its name might be misspelled and/or the script might access a local DB that is not up to date.
+12:09:03 

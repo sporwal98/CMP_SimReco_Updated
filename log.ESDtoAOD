@@ -1,0 +1,77 @@
+12:09:04 Setting up DBRelease /cvmfs/atlas.cern.ch/repo/sw/database/DBRelease/current environment
+12:09:04 Mon Aug  8 12:09:04 CEST 2022
+12:09:05 Preloading tcmalloc_minimal.so
+12:09:06 Py:Athena            INFO including file "AthenaCommon/Preparation.py"
+12:09:06 Py:Athena            INFO using release [Athena-21.0.135] [x86_64-centos7-gcc62-opt] [21.0/1b61cd968d2] -- built on [2022-08-02T2111]
+12:09:06 Py:Athena            INFO including file "AthenaCommon/Bootstrap.py"
+12:09:06 Py:Athena            INFO including file "AthenaCommon/Atlas.UnixStandardJob.py"
+12:09:08 Py:Athena            INFO executing ROOT6Setup
+12:09:08 Py:Athena            INFO including file "AthenaCommon/Execution.py"
+12:09:08 Py:Athena            INFO including file "runargs.ESDtoAOD.py"
+12:09:09 Py:Athena            INFO including file "RecJobTransforms/skeleton.ESDtoAOD_tf.py"
+12:09:09 Py:Athena            INFO including file "RecJobTransforms/CommonRecoSkeletonJobOptions.py"
+12:09:09 Py:Athena            INFO including file "RecExCommon/RecoUsefulFlags.py"
+12:09:09 Py:Athena            INFO Importing MuonRecExample.MuonRecUtils
+12:09:09 Py:Athena            INFO Importing MuonCnvExample.MuonCnvUtils
+12:09:09 Py:Athena            INFO Importing module MuonCnvExample.MuonCalibFlags
+12:09:09 Py:MuonCnvExample.MuonCalibFlags    INFO Changing default mdtPropagationSpeedBeta = 1.0
+12:09:09 Py:MuonRec           INFO Importing MuonRecExample.MuonRecFlags
+12:09:09 Py:MuonRec           INFO Changing default applyResilience = True
+12:09:09 Py:MuonRec           INFO Changing default doMSVertex = True
+12:09:09 Py:MuonRec           INFO Changing default enableErrorTuning = True
+12:09:09 Py:MuonRec           INFO Changing default writeSDOs = True
+12:09:09 Py:Athena            INFO Importing MuonCnvExample.MuonCnvFlags
+12:09:09 Py:MuonCnvExample.MuonCnvFlags    INFO Changing default RpcCablingMode = 'auto'
+12:09:09 Py:MuonCnvExample.MuonCnvFlags    INFO Changing default TgcCablingMode = '12-fold'
+12:09:09 Py:JobProperty ::    INFO AODFlags:: now uses JobProperty mechanisms
+12:09:09 Py:esd_to_aod        INFO ****************** STARTING ESD->AOD MAKING *****************
+12:09:09 Py:ConfigurableDb    INFO Read module info for 5344 configurables from 2 genConfDb files
+12:09:09 Py:ConfigurableDb    INFO No duplicates have been found: that's good !
+12:09:09 Py:Athena            INFO including file "RecExCommon/RecExCommon_topOptions.py"
+12:09:10 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]...
+12:09:10 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]... [done]
+12:09:10 Py:Athena            INFO including file "RecExCond/RecExCommon_flags.py"
+12:09:10 Py:AutoConfiguration    INFO Auto-configuration key 'everything' requested. All default keys will be used.
+12:09:10 Py:AutoConfiguration    INFO Auto-configuration will procede according to the following keys:
+12:09:10 Py:AutoConfiguration    INFO set(['DoTruth', 'ConditionsTag', 'BeamType', 'TriggerStream', 'ProjectName', 'BeamEnergy', 'FieldAndGeo', 'RealOrSim', 'LumiFlags', 'InputType'])
+12:09:10 Py:inputFilePeeker    INFO Executing   inputFilePeeker.py
+12:09:10 Py:inputFilePeeker WARNING Unable to open file [tmp.ESD]
+12:09:10 Py:inputFilePeeker WARNING caught:
+12:09:10 [Errno 2] No such file or directory: 'tmp.ESD'
+12:09:10 Traceback (most recent call last):
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/InputFilePeeker.py", line 51, in _setup
+12:09:10     fi = athFile.fopen(inFile)
+12:09:10   File "<string>", line 2, in fopen
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/PyUtils/AthFile/__init__.py", line 35, in _update_cache
+12:09:10     res = fct(*args)
+12:09:10   File "<string>", line 2, in fopen
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/PyCmt/Decorators.py", line 117, in forking
+12:09:10     reraise_exception(remote_exc)
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/PyCmt/Decorators.py", line 85, in reraise_exception
+12:09:10     raise new_exc.__class__, new_exc, tb
+12:09:10 IOError: [Errno 2] No such file or directory: 'tmp.ESD'
+12:09:10 Py:inputFilePeeker   ERROR Unable to build inputFileSummary from any of the specified input files. There is probably a problem.
+12:09:10 Py:AutoConfiguration   ERROR No RunNumber stored in InputFile!
+12:09:10 Shortened traceback (most recent user call last):
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/jobOptions/RecJobTransforms/skeleton.ESDtoAOD_tf.py", line 106, in <module>
+12:09:10     else: include( "RecExCommon/RecExCommon_topOptions.py" )
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/jobOptions/RecExCommon/RecExCommon_topOptions.py", line 105, in <module>
+12:09:10     include ( "RecExCond/RecExCommon_flags.py" )
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/jobOptions/RecExCond/RecExCommon_flags.py", line 236, in <module>
+12:09:10     ConfigureFromListOfKeys(rec.AutoConfiguration())
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/AutoConfiguration.py", line 899, in ConfigureFromListOfKeys
+12:09:10     rec.projectName=GetProjectName()
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/AutoConfiguration.py", line 309, in GetProjectName
+12:09:10     from RecExConfig.GetCool import cool
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/PyUtils/Helpers.py", line 74, in root6_importhook
+12:09:10     m = oldimporthook(name, globals, locals, fromlist, level)
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/sw/lcg/releases/LCG_88/ROOT/6.08.06/x86_64-centos7-gcc62-opt/lib/ROOT.py", line 303, in _importhook
+12:09:10     return _orig_ihook( name, *args, **kwds )
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/GetCool.py", line 34, in <module>
+12:09:10     cool=_setup()
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/GetCool.py", line 21, in _setup
+12:09:10     lb=GetLBNumber()
+12:09:10   File "/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/python/RecExConfig/AutoConfiguration.py", line 80, in GetLBNumber
+12:09:10     if inputFileSummary['nentries']==0:
+12:09:10 KeyError: 'nentries'
+12:09:10 Py:Athena            INFO leaving with code 8: "an unknown exception occurred"

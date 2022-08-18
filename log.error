@@ -1,0 +1,209 @@
+PyJobTransforms.<module> 2022-08-08 10:27:13,139 INFO logging set in /cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/share/Reco_tf.py
+PyJobTransforms.main 2022-08-08 10:27:15,101 INFO This is /cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/share/Reco_tf.py
+PyJobTransforms.main 2022-08-08 10:27:15,102 INFO no RAWtoALL
+PyJobTransforms.trfExe.__init__ 2022-08-08 10:27:15,662 WARNING Resource monitoring from PerfMon is now deprecated
+PyJobTransforms.transform.parseCmdLineArgs 2022-08-08 10:27:15,680 INFO Transform command line was: '/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/share/Reco_tf.py' '--inputHITSFile' 'HITS.pool.root' '--outputAODFile' 'AOD.root' '--preExec' 'EVNTtoHITS:simFlags.SimBarcodeOffset.set_Value_and_Lock(200000)' 'EVNTtoHITS:simFlags.TRTRangeCut=30.0;simFlags.TightMuonStepping=True' '--preInclude' 'EVNTtoHITS:SimulationJobOptions/preInclude.BeamPipeKill.py,SimulationJobOptions/preInclude.FrozenShowersFCalOnly.py,SimulationJobOptions/preInclude.ExtraParticles.py,SimulationJobOptions/preInclude.G4ExtraProcesses.py' '--postInclude' 'default:RecJobTransforms/UseFrontier.py' '--inputEVNTFile=EVNT.pool.root' '--DBRelease' 'all:current' '--conditionsTag' 'default:OFLCOND-MC16-SDR-14' '--geometryVersion=default:ATLAS-R2-2016-01-00-01_VALIDATION' '--DataRunNumber=284500' '--maxEvents=10'
+PyJobTransforms.transform.execute 2022-08-08 10:27:15,684 INFO Resolving execution graph
+PyJobTransforms.trfGraph.__init__ 2022-08-08 10:27:15,684 INFO Transform graph input data: ['EVNT', 'HITS']; output data ['AOD']
+PyJobTransforms.transform.execute 2022-08-08 10:27:15,748 INFO Starting to trace execution path
+PyJobTransforms.transform.execute 2022-08-08 10:27:15,750 INFO Execution path found with 3 step(s): HITtoRDO RAWtoESD ESDtoAOD
+PyJobTransforms.transform.validateInFiles 2022-08-08 10:27:15,750 INFO Validating input files
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:15,750 INFO Starting legacy (serial) file validation
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:15,751 INFO Validating data type HITS...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:15,751 INFO Validating file HITS.pool.root...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:15,751 INFO HITS.pool.root: Testing event count...
+PyJobTransforms.trfArgClasses._readMetadata 2022-08-08 10:27:15,751 INFO Metadata generator called to obtain nentries for ('HITS.pool.root',)
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,676 INFO Event counting test passed (10 events).
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,676 INFO HITS.pool.root: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,676 INFO Guid is 2ED60BB3-C26C-CC4F-BE04-2844AD40C941
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,677 INFO Validating data type EVNT...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,677 INFO Validating file EVNT.pool.root...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,677 INFO EVNT.pool.root: Testing event count...
+PyJobTransforms.trfArgClasses._readMetadata 2022-08-08 10:27:24,677 INFO Metadata generator called to obtain nentries for ('EVNT.pool.root',)
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,760 INFO Event counting test passed (100 events).
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,760 INFO EVNT.pool.root: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,761 INFO Guid is B657F97F-A5B3-1A41-9ED9-2C6C3A5F9727
+PyJobTransforms.trfValidation.performStandardFileValidation 2022-08-08 10:27:24,761 INFO Stopping legacy (serial) file validation
+PyJobTransforms.trfJobOptions.writeRunArgs 2022-08-08 10:27:24,762 INFO Writing runArgs to file "runargs.HITtoRDO.py"
+PyJobTransforms.trfJobOptions.writeRunArgs 2022-08-08 10:27:24,780 INFO Successfully wrote runargs file runargs.HITtoRDO.py
+PyJobTransforms.trfExe.preExecute 2022-08-08 10:27:24,782 INFO Asetup report: 	AtlasBaseDir=/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111
+	AtlasProject=Athena
+	AtlasVersion=21.0.135
+	TestArea=/afs/cern.ch/user/s/sporwal/public/CMP_working
+	Athena_PLATFORM=x86_64-centos7-gcc62-opt
+No readable patch area found
+PyJobTransforms.trfEnv.probeTcmallocSettings 2022-08-08 10:27:24,793 INFO Skipping inclusion of tcmalloc
+PyJobTransforms.trfExe._prepAthenaCommandLine 2022-08-08 10:27:24,793 INFO Setting athena preloadlibs for substep HITtoRDO to: /cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libintlc.so.5:/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libimf.so
+PyJobTransforms.trfExe._prepAthenaCommandLine 2022-08-08 10:27:24,793 INFO Skipping test for "--drop-and-reload" in this executor
+PyJobTransforms.trfExe._prepAthenaCommandLine 2022-08-08 10:27:24,793 INFO Updated script arguments with topoptions: ['athena.py', '--preloadlib=/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libintlc.so.5:/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libimf.so', 'runargs.HITtoRDO.py', 'SimuJobTransforms/skeleton.HITtoRDO.py']
+PyJobTransforms.trfExe.preExecute 2022-08-08 10:27:24,793 INFO Will execute script as ['athena.py', '--preloadlib=/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libintlc.so.5:/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libimf.so', 'runargs.HITtoRDO.py', 'SimuJobTransforms/skeleton.HITtoRDO.py']
+PyJobTransforms.trfExe.preExecute 2022-08-08 10:27:24,794 INFO Interactive environment detected (stdio or stdout is a tty) - enabling command echoing to stdout
+PyJobTransforms.trfExe.preExecute 2022-08-08 10:27:24,820 INFO Now writing wrapper for substep executor HITtoRDO
+PyJobTransforms.trfExe._writeAthenaWrapper 2022-08-08 10:27:24,821 INFO Valgrind not engaged
+PyJobTransforms.trfExe.preExecute 2022-08-08 10:27:24,823 INFO Athena will be executed in a subshell via ['./runwrapper.HITtoRDO.sh']
+PyJobTransforms.trfExe.execute 2022-08-08 10:27:24,823 INFO Starting execution of HITtoRDO (['./runwrapper.HITtoRDO.sh'])
+HITtoRDO 10:27:24 Setting up DBRelease /cvmfs/atlas.cern.ch/repo/sw/database/DBRelease/current environment
+HITtoRDO 10:27:24 Mon Aug  8 10:27:24 CEST 2022
+HITtoRDO 10:27:24 Preloading tcmalloc_minimal.so
+HITtoRDO 10:27:24 Preloading /cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libintlc.so.5:/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/AthenaExternals/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/lib/libimf.so
+HITtoRDO 10:27:26 Py:Athena            INFO including file "AthenaCommon/Preparation.py"
+HITtoRDO 10:27:26 Py:Athena            INFO using release [Athena-21.0.135] [x86_64-centos7-gcc62-opt] [21.0/1b61cd968d2] -- built on [2022-08-02T2111]
+HITtoRDO 10:27:26 Py:Athena            INFO including file "AthenaCommon/Bootstrap.py"
+HITtoRDO 10:27:26 Py:Athena            INFO including file "AthenaCommon/Atlas.UnixStandardJob.py"
+HITtoRDO 10:27:29 Py:Athena            INFO executing ROOT6Setup
+HITtoRDO 10:27:30 Py:Athena            INFO including file "AthenaCommon/Execution.py"
+HITtoRDO 10:27:30 Py:Athena            INFO including file "runargs.HITtoRDO.py"
+HITtoRDO 10:27:30 WARNING - AttributeError for LowPtMinbiasHitsFile
+HITtoRDO 10:27:30 WARNING - AttributeError for beamGasHitsFile
+HITtoRDO 10:27:30 WARNING - AttributeError for cavernHitsFile
+HITtoRDO 10:27:30 WARNING - AttributeError for HighPtMinbiasHitsFile
+HITtoRDO 10:27:30 WARNING - AttributeError for beamHaloHitsFile
+HITtoRDO 10:27:30 Py:Athena            INFO including file "SimuJobTransforms/skeleton.HITtoRDO.py"
+HITtoRDO 10:27:30 Py:Athena            INFO including file "SimuJobTransforms/CommonSkeletonJobOptions.py"
+HITtoRDO 10:27:30 stripping _VALIDATION
+HITtoRDO 10:27:30 Py:Digi_tf           INFO ****************** STARTING DIGITIZATION *****************
+HITtoRDO 10:27:30 Py:Digi_tf           INFO **** Transformation run arguments
+HITtoRDO 10:27:30 Py:Digi_tf           INFO RunArguments:
+HITtoRDO 10:27:30    DataRunNumber = 284500
+HITtoRDO 10:27:30    HITSFileIO = 'input'
+HITtoRDO 10:27:30    conditionsTag = 'OFLCOND-MC16-SDR-14'
+HITtoRDO 10:27:30    geometryVersion = 'ATLAS-R2-2016-01-00-01_VALIDATION'
+HITtoRDO 10:27:30    inputHITSFile = ['HITS.pool.root']
+HITtoRDO 10:27:30    inputHITSFileNentries = 10L
+HITtoRDO 10:27:30    inputHITSFileType = 'HITS'
+HITtoRDO 10:27:30    maxEvents = 10
+HITtoRDO 10:27:30    outputRDOFile = 'tmp.RDO'
+HITtoRDO 10:27:30    outputRDOFileType = 'RDO'
+HITtoRDO 10:27:30    postInclude = ['RecJobTransforms/UseFrontier.py']
+HITtoRDO 10:27:30    trfSubstepName = 'HITtoRDO'
+HITtoRDO 10:27:30 Py:Digi_tf        WARNING digiSeedOffset1 not set
+HITtoRDO 10:27:30 Py:Digi_tf        WARNING digiSeedOffset2 not set
+HITtoRDO 10:27:30               : bpipe pixel   SCT   TRT   BCM   DBM Lucid   ZDC  ALFA   AFP FwdRegion    em   HEC  FCal  Tile   MDT   CSC   TGC   RPC  sTGC Micromegas Truth  LVL1 BField   FTK
+HITtoRDO 10:27:30           dcs :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      detdescr :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      digitize :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      geometry :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRDO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRIO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       makeRIO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       overlay :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30        pileup :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRDOBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30   readRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRIOBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30   readRIOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      simulate :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  simulateLVL1 :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       writeBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  writeRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  writeRIOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30 Py:Digi_tf           INFO Overriding run number to be: 284500
+HITtoRDO 10:27:30 Py:Athena            INFO including file "Digitization/Digitization.py"
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO The JobProperty InputFormat is blocked
+HITtoRDO 10:27:30 Py:Digitization   WARNING DetFlags already defined! This means DetFlags should have been fully configured already..
+HITtoRDO 10:27:30               : bpipe pixel   SCT   TRT   BCM   DBM Lucid   ZDC  ALFA   AFP FwdRegion    em   HEC  FCal  Tile   MDT   CSC   TGC   RPC  sTGC Micromegas Truth  LVL1 BField   FTK
+HITtoRDO 10:27:30           dcs :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      detdescr :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      digitize :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      geometry :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRDO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRIO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       makeRIO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       overlay :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30        pileup :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRDOBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30   readRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRIOBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30   readRIOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      simulate :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  simulateLVL1 :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       writeBS :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  writeRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  writeRIOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30               : bpipe pixel   SCT   TRT   BCM   DBM Lucid   ZDC  ALFA   AFP FwdRegion    em   HEC  FCal  Tile   MDT   CSC   TGC   RPC  sTGC Micromegas Truth  LVL1 BField   FTK
+HITtoRDO 10:27:30           dcs :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      detdescr :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      digitize :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30      geometry :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRDO :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       haveRIO :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30       makeRIO :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30       overlay :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30        pileup :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRDOBS :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30   readRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30     readRIOBS :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30   readRIOPool :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30      simulate :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30  simulateLVL1 :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30       writeBS :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30  writeRDOPool :    ON    ON    ON    ON    ON    ON    ON    --    --    ON        ON    ON    ON    ON    ON    ON    ON    ON    ON    ON         ON    ON    --     ON    ON
+HITtoRDO 10:27:30  writeRIOPool :    --    --    --    --    --    --    --    --    --    --        --    --    --    --    --    --    --    --    --    --         --    --    --     --    --
+HITtoRDO 10:27:30 Py:Digitization      INFO Global jobProperties values:
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  x-> JobProperties.Global.ConditionsTag = 'OFLCOND-MC16-SDR-14'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Global.DataSource = 'geant4'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Global.DatabaseInstance = 'auto'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  x-> JobProperties.Global.DetDescrVersion = 'ATLAS-R2-2016-01-00-01'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Global.DetGeo = 'atlas'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  x-> JobProperties.Global.InputFormat = 'pool'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Global.Luminosity = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Global.isOverlay = False
+HITtoRDO 10:27:30 Py:Digitization      INFO Digitization jobProperties values:
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.BeamIntensityPattern = 'None'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.FixedT0BunchCrossing = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.HighPtMinBiasInputCols = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.IOVDbGlobalTag = 'OFLCOND-MC16-SDR-14'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.LowPtMinBiasInputCols = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.PileUpPremixing = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.RunAndLumiOverrideList = 'None'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.SignalPatternForSteppingCache = 'None'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.SimG4VersionUsed = 'not_specified'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.TRTRangeCut = 0.05
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.beamGasInputCols = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.beamHaloInputCols = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.bunchSpacing = 25
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.cavernIgnoresBeamInt = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.cavernInputCols = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.dataRunNumber = 284500
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.digiSteeringConf = 'StandardPileUpToolsAlg'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doBeamGas = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doBeamHalo = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doBichselSimulation = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doCaloNoise = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doCavern = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doDigiTruth = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doFwdNoise = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doHighPtMinBias = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doInDetNoise = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doLowPtMinBias = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doMuonNoise = True
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doRadiationDamage = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.doXingByXingPileUp = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.experimentalDigi = []
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.finalBunchCrossing = 6
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.initialBunchCrossing = -32
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfBeamGas = 0.0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfBeamHalo = 0.0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfCavern = 0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfCollisions = 0.0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfHighPtMinBias = 0.0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.numberOfLowPtMinBias = 0.0
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.overrideMetadata = []
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.physicsList = 'QGSP_BERT'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.pileupDSID = {'High Pt Minimum Bias': 361035, 'Low Pt Minimum Bias': 361034}
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.readSeedsFromFile = False
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.rndmSeedInputFile = 'AtRanluxGenSvc.in'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.rndmSeedList = []
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.rndmSeedOffset1 = 1
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.rndmSeedOffset2 = 2
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.rndmSvc = 'AtDSFMTGenSvc'
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.simRunNumber = None
+HITtoRDO 10:27:30 Py:JobProperty ::    INFO  --> JobProperties.Digitization.specialConfiguration = None
+HITtoRDO 10:27:30 Py:DigitizationReadMetadata    INFO Checking for Signal Simulation MetaData...
+HITtoRDO 10:27:32 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]...
+HITtoRDO 10:27:32 Py:AthFile           INFO loading cache from [athfile-cache.ascii.gz]... [done]
+HITtoRDO 10:27:33 Py:AthFile           INFO opening [HITS.pool.root]...
+PyJobTransforms.trfExe.validate 2022-08-08 10:27:38,592 ERROR Validation of return code failed: HITtoRDO got a SIGHUP signal (exit code 129) (Error code 65)
+PyJobTransforms.trfExe.validate 2022-08-08 10:27:38,607 INFO Scanning logfile log.HITtoRDO for errors in substep h2r
+PyJobTransforms.transform.execute 2022-08-08 10:27:38,613 CRITICAL Transform executor raised TransformValidationException: HITtoRDO got a SIGHUP signal (exit code 129)
+PyJobTransforms.trfDecorators.exception_wrapper 2022-08-08 10:27:41,495 CRITICAL Caught a keyboard interrupt - exiting at your request.

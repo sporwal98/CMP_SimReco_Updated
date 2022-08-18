@@ -1,0 +1,350 @@
+{
+  "cmdLine": "'/cvmfs/atlas-nightlies.cern.ch/repo/sw/21.0_Athena_x86_64-centos7-gcc62-opt/2022-08-02T2111/Athena/21.0.135/InstallArea/x86_64-centos7-gcc62-opt/share/Reco_tf.py' '--inputHITSFile' 'HITS.pool.root' '--outputAODFile' 'AOD.root' '--preExec' 'EVNTtoHITS:simFlags.SimBarcodeOffset.set_Value_and_Lock(200000)' 'EVNTtoHITS:simFlags.TRTRangeCut=30.0;simFlags.TightMuonStepping=True' '--preInclude' 'EVNTtoHITS:SimulationJobOptions/preInclude.BeamPipeKill.py,SimulationJobOptions/preInclude.FrozenShowersFCalOnly.py,SimulationJobOptions/preInclude.ExtraParticles.py,SimulationJobOptions/preInclude.G4ExtraProcesses.py' '--postInclude' 'default:RecJobTransforms/UseFrontier.py' '--inputEVNTFile=EVNT.pool.root' '--DBRelease' 'all:current' '--conditionsTag' 'default:OFLCOND-MC16-SDR-14' '--geometryVersion=default:ATLAS-R2-2016-01-00-01_VALIDATION' '--DataRunNumber=284500' '--maxEvents=10'", 
+  "created": "2022-08-08T12:09:11", 
+  "executor": [
+    {
+      "asetup": null, 
+      "errMsg": "", 
+      "exeConfig": {
+        "inputs": [
+          "HITS"
+        ], 
+        "outputs": [
+          "RDO"
+        ], 
+        "script": "athena.py", 
+        "substep": "h2r"
+      }, 
+      "logfileReport": {
+        "countSummary": {
+          "CATASTROPHE": 0, 
+          "CRITICAL": 0, 
+          "DEBUG": 0, 
+          "ERROR": 0, 
+          "FATAL": 0, 
+          "IGNORED": 0, 
+          "INFO": 2044, 
+          "UNKNOWN": 4352, 
+          "VERBOSE": 0, 
+          "WARNING": 21
+        }, 
+        "details": {}
+      }, 
+      "metaData": {
+        "[IOVDbGlobalTag": "OFLCOND-MC16-SDR-14]"
+      }, 
+      "name": "HITtoRDO", 
+      "rc": 0, 
+      "statusOK": true, 
+      "validation": true
+    }, 
+    {
+      "asetup": null, 
+      "errMsg": "", 
+      "exeConfig": {
+        "inputs": [
+          "RDO"
+        ], 
+        "outputs": [
+          "ESD"
+        ], 
+        "script": "athena.py", 
+        "substep": "r2e"
+      }, 
+      "logfileReport": {
+        "countSummary": {
+          "CATASTROPHE": 0, 
+          "CRITICAL": 0, 
+          "DEBUG": 0, 
+          "ERROR": 0, 
+          "FATAL": 0, 
+          "IGNORED": 0, 
+          "INFO": 105, 
+          "UNKNOWN": 14, 
+          "VERBOSE": 0, 
+          "WARNING": 4
+        }, 
+        "details": {}
+      }, 
+      "metaData": {}, 
+      "name": "RAWtoESD", 
+      "rc": 0, 
+      "statusOK": true, 
+      "validation": true
+    }, 
+    {
+      "asetup": null, 
+      "errMsg": "Non-zero return code from ESDtoAOD (8)", 
+      "exeConfig": {
+        "inputs": [
+          "ESD"
+        ], 
+        "outputs": [
+          "AOD"
+        ], 
+        "script": "athena.py", 
+        "substep": "e2a"
+      }, 
+      "logfileReport": {
+        "countSummary": {
+          "CATASTROPHE": 0, 
+          "CRITICAL": 0, 
+          "DEBUG": 0, 
+          "ERROR": 2, 
+          "FATAL": 1, 
+          "IGNORED": 0, 
+          "INFO": 33, 
+          "UNKNOWN": 17, 
+          "VERBOSE": 0, 
+          "WARNING": 2
+        }, 
+        "details": {
+          "ERROR": [
+            {
+              "count": 1, 
+              "firstLine": 53, 
+              "message": "Py:inputFilePeeker   ERROR Unable to build inputFileSummary from any of the specified input files. There is probably a problem."
+            }, 
+            {
+              "count": 1, 
+              "firstLine": 54, 
+              "message": "Py:AutoConfiguration   ERROR No RunNumber stored in InputFile!"
+            }
+          ], 
+          "FATAL": [
+            {
+              "count": 1, 
+              "firstLine": 76, 
+              "message": "KeyError: 'nentries'"
+            }
+          ]
+        }
+      }, 
+      "metaData": {}, 
+      "name": "ESDtoAOD", 
+      "rc": 8, 
+      "statusOK": false, 
+      "validation": false
+    }
+  ], 
+  "exitAcronym": "TRF_EXEC_FAIL", 
+  "exitCode": 65, 
+  "exitMsg": "Non-zero return code from ESDtoAOD (8); Logfile error in log.ESDtoAOD: \"KeyError: 'nentries'\"", 
+  "exitMsgExtra": "", 
+  "files": {
+    "input": [
+      {
+        "dataset": null, 
+        "nentries": 10, 
+        "subFiles": [
+          {
+            "file_guid": "2ED60BB3-C26C-CC4F-BE04-2844AD40C941", 
+            "name": "HITS.pool.root"
+          }
+        ], 
+        "type": "HITS"
+      }, 
+      {
+        "dataset": null, 
+        "nentries": 100, 
+        "subFiles": [
+          {
+            "file_guid": "B657F97F-A5B3-1A41-9ED9-2C6C3A5F9727", 
+            "name": "EVNT.pool.root"
+          }
+        ], 
+        "type": "EVNT"
+      }
+    ], 
+    "output": [
+      {
+        "argName": "outputAODFile", 
+        "dataset": null, 
+        "subFiles": [
+          {
+            "file_guid": null, 
+            "file_size": null, 
+            "name": "AOD.root", 
+            "nentries": null
+          }
+        ], 
+        "type": "AOD"
+      }
+    ]
+  }, 
+  "name": "Reco_tf", 
+  "reportVersion": "2.1.0", 
+  "resource": {
+    "dbDataTotal": 30856648, 
+    "dbTimeTotal": 3.72, 
+    "executor": {
+      "ESDtoAOD": {
+        "cpuTime": 3.15, 
+        "memory": {
+          "Avg": {
+            "avgPSS": 10644, 
+            "avgRSS": 13872, 
+            "avgSwap": 0, 
+            "avgVMEM": 114928, 
+            "rateRBYTES": 3299328, 
+            "rateRCHAR": 620932, 
+            "rateWBYTES": 2048, 
+            "rateWCHAR": 79441
+          }, 
+          "Max": {
+            "maxPSS": 10644, 
+            "maxRSS": 13872, 
+            "maxSwap": 0, 
+            "maxVMEM": 114928, 
+            "totRBYTES": 6598656, 
+            "totRCHAR": 1241865, 
+            "totWBYTES": 4096, 
+            "totWCHAR": 158883
+          }
+        }, 
+        "postExe": {
+          "cpuTime": 0.1, 
+          "wallTime": 0.96
+        }, 
+        "preExe": {
+          "cpuTime": 0.0, 
+          "wallTime": 0.01
+        }, 
+        "total": {
+          "cpuTime": null, 
+          "wallTime": null
+        }, 
+        "validation": {
+          "cpuTime": null, 
+          "wallTime": null
+        }, 
+        "wallTime": 6.04
+      }, 
+      "HITtoRDO": {
+        "cpuTime": 60.57, 
+        "dbData": 30856648, 
+        "dbTime": 3.72, 
+        "memory": {
+          "Avg": {
+            "avgPSS": 557231, 
+            "avgRSS": 561597, 
+            "avgSwap": 0, 
+            "avgVMEM": 960406, 
+            "rateRBYTES": 10907387, 
+            "rateRCHAR": 2602385, 
+            "rateWBYTES": 520, 
+            "rateWCHAR": 30918
+          }, 
+          "Max": {
+            "maxPSS": 1167572, 
+            "maxRSS": 1172616, 
+            "maxSwap": 0, 
+            "maxVMEM": 1799168, 
+            "totRBYTES": 687165440, 
+            "totRCHAR": 163950257, 
+            "totWBYTES": 32768, 
+            "totWCHAR": 1947845
+          }
+        }, 
+        "nevents": 10, 
+        "postExe": {
+          "cpuTime": 0.27, 
+          "wallTime": 0.99
+        }, 
+        "preExe": {
+          "cpuTime": 0.0, 
+          "wallTime": 0.02
+        }, 
+        "total": {
+          "cpuTime": 60.84, 
+          "wallTime": 88.52
+        }, 
+        "validation": {
+          "cpuTime": 0.0, 
+          "wallTime": 0.9
+        }, 
+        "wallTime": 86.61
+      }, 
+      "RAWtoESD": {
+        "cpuTime": 23.8, 
+        "memory": {
+          "Avg": {
+            "avgPSS": 307225, 
+            "avgRSS": 357604, 
+            "avgSwap": 0, 
+            "avgVMEM": 982726, 
+            "rateRBYTES": 17012992, 
+            "rateRCHAR": 806393, 
+            "rateWBYTES": 640, 
+            "rateWCHAR": 73570
+          }, 
+          "Max": {
+            "maxPSS": 606779, 
+            "maxRSS": 705428, 
+            "maxSwap": 0, 
+            "maxVMEM": 1912528, 
+            "totRBYTES": 544415744, 
+            "totRCHAR": 25804593, 
+            "totWBYTES": 20480, 
+            "totWCHAR": 2354242
+          }
+        }, 
+        "nevents": 10, 
+        "postExe": {
+          "cpuTime": 0.2, 
+          "wallTime": 0.92
+        }, 
+        "preExe": {
+          "cpuTime": 0.0, 
+          "wallTime": 0.02
+        }, 
+        "total": {
+          "cpuTime": 24.0, 
+          "wallTime": 44.57
+        }, 
+        "validation": {
+          "cpuTime": 0.0, 
+          "wallTime": 0.01
+        }, 
+        "wallTime": 43.62
+      }
+    }, 
+    "machine": {
+      "cpu_family": "6", 
+      "linux_distribution": [
+        "CentOS Linux", 
+        "7.9.2009", 
+        "Core"
+      ], 
+      "model": "61", 
+      "model_name": "Intel Core Processor (Broadwell, IBRS)", 
+      "node": "lxplus721.cern.ch", 
+      "platform": "Linux-3.10.0-1160.71.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core"
+    }, 
+    "transform": {
+      "cpuEfficiency": 0.6287, 
+      "cpuPWEfficiency": 0.6074, 
+      "cpuTime": 5.13, 
+      "cpuTimeTotal": 84.84, 
+      "externalCpuTime": 0.78, 
+      "inFileValidation": {
+        "cpuTime": 0.21, 
+        "wallTime": 6.36
+      }, 
+      "outFileValidation": {
+        "cpuTime": null, 
+        "wallTime": null
+      }, 
+      "reportGeneration": {
+        "cpuTime": null, 
+        "wallTime": null
+      }, 
+      "transformSetup": {
+        "cpuTime": 0.0, 
+        "wallTime": 0.89
+      }, 
+      "trfPredata": null, 
+      "wallTime": 147.36
+    }
+  }
+}

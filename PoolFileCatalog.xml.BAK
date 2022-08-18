@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- Edited By POOL -->
+<!DOCTYPE POOLFILECATALOG SYSTEM "InMemory">
+<POOLFILECATALOG>
+  <File ID="B657F97F-A5B3-1A41-9ED9-2C6C3A5F9727">
+    <physical>
+      <pfn filetype="ROOT_All" name="EVNT.pool.root"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="2ED60BB3-C26C-CC4F-BE04-2844AD40C941">
+    <physical>
+      <pfn filetype="ROOT_All" name="HITS.pool.root"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="1DE99BE5-AA2C-FF43-B606-81494DED6562">
+    <physical>
+      <pfn filetype="ROOT_All" name="DAOD_PASSTHR.DAOD.root"/>
+    </physical>
+    <logical/>
+  </File>
+
+  <File ID="A9FBFAC6-8000-2748-974B-33206919A621">
+    <physical>
+      <pfn filetype="ROOT_All" name="tmp.RDO"/>
+    </physical>
+    <logical/>
+  </File>
+
+</POOLFILECATALOG>
